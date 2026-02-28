@@ -1,1 +1,443 @@
-# buildback
+<p align="center">
+  <img src="./img.png" alt="Project Banner" width="100%">
+</p>
+
+# [BuildBack] 🎯
+
+## Basic Details
+
+### Team Name: [Nova]
+
+### Team Members
+- Member 1: [Nedhya Remesh] - [College of Engineering Thalassery]
+- Member 2: [Surabhi Aneesh] - [College of Engineering Thalassery]
+
+### Hosted Project Link
+[mention your project hosted link here]
+
+### Project Description
+[BuildBack is an interactive web application designed to help Computer Science students and developers instantly reverse-engineer codebases and documentation into presentation-ready architecture guides. It acts as an automated "study buddy" and mock examiner, transforming raw project files into comprehensive technical breakdowns and interactive Viva Voce (project defense) mock tests.]
+
+### The Problem statement
+[Students and developers waste hours manually decoding complex codebases, drawing architecture diagrams from scratch, and guessing what technical questions an examiner might ask during a project defense. The manual documentation process is overwhelming, slow, and stressful..]
+
+### The Solution
+[BuildBack completely automates the documentation and defense-prep workflow. By simply pasting a GitHub link or uploading a project file, our system instantly reverse-engineers the code to generate visual architecture diagrams, ready-to-read presentation scripts, and a context-aware, interactive mock Viva test. We turn hours of stressful manual preparation into a seamless, one-click process.]
+
+---
+
+## Technical Details
+
+### Technologies/Components Used
+
+**For Software:**
+- Languages used: [Python]
+- Frameworks used: [Streamlit]
+- Libraries used: [google-generativeai,requests,pypdf,python-pptx,zipfile, os, tempfile, json, re]
+- Tools used: [VS Code,Mermaid.js,GitHub REST API]
+
+**For Hardware:**
+- Main components: [List main components]
+- Specifications: [Technical specifications]
+- Tools required: [List tools needed]
+
+---
+
+## Features
+
+List the key features of your project:
+- Feature 1: [Multi-Source Data Ingestion: Effortlessly import project context by pasting a public GitHub URL or uploading local codebase files and documentation (ZIP, PDF, PPTX).]
+- Feature 2: [Automated Architecture Reverse-Engineering: Instantly generates a high-level system summary, an in-depth component breakdown, and visual flowcharts (via Mermaid.js) directly from the raw code]
+- Feature 3: [Interactive Mock Defense (Viva Prep): Auto-generates a context-aware, 5-question Multiple Choice test with a gamified UI, progress tracking, and detailed explanations to simulate a technical evaluation.]
+- Feature 4: [One-Click Export & Documentation: Download the fully generated architecture guide as a clean Markdown (.md) file, ready to be used as a project README or printed as a handout for evaluators.]
+
+---
+
+## Implementation
+
+### For Software:
+
+#### Installation
+```bash
+[Installation commands - e.g., npm install, pip install -r requirements.txt]
+```
+
+#### Run
+```bash
+[Run commands - e.g., npm start, python app.py]
+```
+
+### For Hardware:
+
+#### Components Required
+[List all components needed with specifications]
+
+#### Circuit Setup
+[Explain how to set up the circuit]
+
+---
+
+## Project Documentation
+
+### For Software:
+
+#### Screenshots (Add at least 3)
+
+![Screenshot1](Add screenshot 1 here with proper name)
+*Add caption explaining what this shows*
+
+![Screenshot2](Add screenshot 2 here with proper name)
+*Add caption explaining what this shows*
+
+![Screenshot3](Add screenshot 3 here with proper name)
+*Add caption explaining what this shows*
+
+#### Diagrams
+
+**System Architecture:**
+
+![Architecture Diagram]<img width="3544" height="5722" alt="Generative AI Pipeline for-2026-02-28-045501" src="https://github.com/user-attachments/assets/a32c0f88-b4a2-41ea-b91c-bc34df2d31fb" />
+
+*Explain your system architecture - components, data flow, tech stack interaction*
+Data Ingestion: The user interacts with the Streamlit Frontend. Depending on their input, the system either makes network calls to the GitHub API or uses local Python libraries (pypdf, zipfile) to parse uploaded files.
+
+Noise Filtering: The system automatically strips out useless files (like node_modules or .git) to create a clean, token-efficient context block.
+
+AI Orchestration: This clean context is sent to the AI Engine. We use dual-prompting here: one prompt strictly requests a Markdown architecture report, and the second prompt forces the AI to output a pure JSON array for the quiz.
+
+Stateful Rendering: The generated Markdown is rendered into the dashboard (complete with visual diagrams), and the JSON array is parsed by Streamlit's session state to build the interactive, auto-graded mock test.
+
+**Application Workflow:**
+
+![Workflow]
+<img width="4447" height="5939" alt="AI Orchestration for-2026-02-28-050137" src="https://github.com/user-attachments/assets/358d0003-f11b-417a-9d1e-4647d3bcedd3" />
+
+*Add caption explaining your workflow*
+Step 1: Context Aggregation
+The user provides their project source (a GitHub repository link or a local ZIP/PDF/PPTX file). BuildBack instantly scans the files, identifies the core tech stack (e.g., React, Django), and extracts a truncated summary of the codebase.
+
+Step 2: Reverse-Engineering & Diagramming
+The extracted data is processed by the AI engine, which generates a high-level executive summary, a detailed component-by-component breakdown, and a visual flowchart mapping out how data moves through the user's system.
+
+Step 3: The "Pitch" Generation
+BuildBack synthesizes the technical data into a conversational, 60-second "Elevator Pitch," giving the student a ready-to-read script for introducing their project to an evaluator.
+
+Step 4: Interactive Mock Viva Defense
+Simultaneously, the system generates a 5-question multiple-choice quiz tailored explicitly to the detected frameworks and logic. The user interacts with the quiz, receiving instant grading and detailed "Why?" explanations for every right or wrong answer to reinforce their knowledge.
+
+Step 5: Export & Deploy
+Once the review is complete, the user clicks a single button to download the entire generated architecture guide as a clean Markdown (.md) file, ready to be dropped into their repository as a professional README or printed for their defense.
+---
+
+### For Hardware:
+
+#### Schematic & Circuit
+
+![Circuit](Add your circuit diagram here)
+*Add caption explaining connections*
+
+![Schematic](Add your schematic diagram here)
+*Add caption explaining the schematic*
+
+#### Build Photos
+
+![Team](Add photo of your team here)
+
+![Components](Add photo of your components here)
+*List out all components shown*
+
+![Build](Add photos of build process here)
+*Explain the build steps*
+
+![Final](Add photo of final product here)
+*Explain the final build*
+
+---
+
+## Additional Documentation
+
+### For Web Projects with Backend:
+
+#### API Documentation
+
+**Base URL:** `https://api.yourproject.com`
+
+##### Endpoints
+
+**GET /api/endpoint**
+- **Description:** [What it does]
+- **Parameters:**
+  - `param1` (string): [Description]
+  - `param2` (integer): [Description]
+- **Response:**
+```json
+{
+  "status": "success",
+  "data": {}
+}
+```
+
+**POST /api/endpoint**
+- **Description:** [What it does]
+- **Request Body:**
+```json
+{
+  "field1": "value1",
+  "field2": "value2"
+}
+```
+- **Response:**
+```json
+{
+  "status": "success",
+  "message": "Operation completed"
+}
+```
+
+[Add more endpoints as needed...]
+
+---
+
+### For Mobile Apps:
+
+#### App Flow Diagram
+
+![App Flow](docs/app-flow.png)
+*Explain the user flow through your application*
+
+#### Installation Guide
+
+**For Android (APK):**
+1. Download the APK from [Release Link]
+2. Enable "Install from Unknown Sources" in your device settings:
+   - Go to Settings > Security
+   - Enable "Unknown Sources"
+3. Open the downloaded APK file
+4. Follow the installation prompts
+5. Open the app and enjoy!
+
+**For iOS (IPA) - TestFlight:**
+1. Download TestFlight from the App Store
+2. Open this TestFlight link: [Your TestFlight Link]
+3. Click "Install" or "Accept"
+4. Wait for the app to install
+5. Open the app from your home screen
+
+**Building from Source:**
+```bash
+# For Android
+flutter build apk
+# or
+./gradlew assembleDebug
+
+# For iOS
+flutter build ios
+# or
+xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
+```
+
+---
+
+### For Hardware Projects:
+
+#### Bill of Materials (BOM)
+
+| Component | Quantity | Specifications | Price | Link/Source |
+|-----------|----------|----------------|-------|-------------|
+| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
+| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
+| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
+| Breadboard | 1 | 830 points | ₹100 | [Link] |
+| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
+| [Add more...] | | | | |
+
+**Total Estimated Cost:** ₹[Amount]
+
+#### Assembly Instructions
+
+**Step 1: Prepare Components**
+1. Gather all components listed in the BOM
+2. Check component specifications
+3. Prepare your workspace
+![Step 1](images/assembly-step1.jpg)
+*Caption: All components laid out*
+
+**Step 2: Build the Power Supply**
+1. Connect the power rails on the breadboard
+2. Connect Arduino 5V to breadboard positive rail
+3. Connect Arduino GND to breadboard negative rail
+![Step 2](images/assembly-step2.jpg)
+*Caption: Power connections completed*
+
+**Step 3: Add Components**
+1. Place LEDs on breadboard
+2. Connect resistors in series with LEDs
+3. Connect LED cathodes to GND
+4. Connect LED anodes to Arduino digital pins (2-6)
+![Step 3](images/assembly-step3.jpg)
+*Caption: LED circuit assembled*
+
+**Step 4: [Continue for all steps...]**
+
+**Final Assembly:**
+![Final Build](images/final-build.jpg)
+*Caption: Completed project ready for testing*
+
+---
+
+### For Scripts/CLI Tools:
+
+#### Command Reference
+
+**Basic Usage:**
+```bash
+python script.py [options] [arguments]
+```
+
+**Available Commands:**
+- `command1 [args]` - Description of what command1 does
+- `command2 [args]` - Description of what command2 does
+- `command3 [args]` - Description of what command3 does
+
+**Options:**
+- `-h, --help` - Show help message and exit
+- `-v, --verbose` - Enable verbose output
+- `-o, --output FILE` - Specify output file path
+- `-c, --config FILE` - Specify configuration file
+- `--version` - Show version information
+
+**Examples:**
+
+```bash
+# Example 1: Basic usage
+python script.py input.txt
+
+# Example 2: With verbose output
+python script.py -v input.txt
+
+# Example 3: Specify output file
+python script.py -o output.txt input.txt
+
+# Example 4: Using configuration
+python script.py -c config.json --verbose input.txt
+```
+
+#### Demo Output
+
+**Example 1: Basic Processing**
+
+**Input:**
+```
+This is a sample input file
+with multiple lines of text
+for demonstration purposes
+```
+
+**Command:**
+```bash
+python script.py sample.txt
+```
+
+**Output:**
+```
+Processing: sample.txt
+Lines processed: 3
+Characters counted: 86
+Status: Success
+Output saved to: output.txt
+```
+
+**Example 2: Advanced Usage**
+
+**Input:**
+```json
+{
+  "name": "test",
+  "value": 123
+}
+```
+
+**Command:**
+```bash
+python script.py -v --format json data.json
+```
+
+**Output:**
+```
+[VERBOSE] Loading configuration...
+[VERBOSE] Parsing JSON input...
+[VERBOSE] Processing data...
+{
+  "status": "success",
+  "processed": true,
+  "result": {
+    "name": "test",
+    "value": 123,
+    "timestamp": "2024-02-07T10:30:00"
+  }
+}
+[VERBOSE] Operation completed in 0.23s
+```
+
+---
+
+## Project Demo
+
+### Video
+[Add your demo video link here - YouTube, Google Drive, etc.]
+
+*Explain what the video demonstrates - key features, user flow, technical highlights*
+
+### Additional Demos
+[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
+
+---
+
+## AI Tools Used (Optional - For Transparency Bonus)
+
+If you used AI tools during development, document them here for transparency:
+
+**Tool Used:** [Gemini]
+
+**Purpose:** [What you used it for]
+- Example: "Generated boilerplate React components"
+- Example: "Debugging assistance for async functions"
+- Example: "Code review and optimization suggestions"
+
+**Key Prompts Used:**
+- "Create a REST API endpoint for user authentication"
+- "Debug this async function that's causing race conditions"
+- "Optimize this database query for better performance"
+
+**Percentage of AI-generated code:** [Approximately X%]
+
+**Human Contributions:**
+- Architecture design and planning
+- Custom business logic implementation
+- Integration and testing
+- UI/UX design decisions
+
+*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
+
+---
+
+## Team Contributions
+
+- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
+- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
+- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+
+---
+
+## License
+
+This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
+
+**Common License Options:**
+- MIT License (Permissive, widely used)
+- Apache 2.0 (Permissive with patent grant)
+- GPL v3 (Copyleft, requires derivative works to be open source)
+
+---
+
+Made with ❤️ at TinkerHub
