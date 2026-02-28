@@ -272,9 +272,26 @@ python script.py -v --format json data.json
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+https://drive.google.com/file/d/1b2zvLHOjCsTXFKUqE7jyuLdrpptwZuiE/view?usp=sharing
 
 *Explain what the video demonstrates - key features, user flow, technical highlights*
+The video starts by showing the main dashboard with your purple BuildBack header and the tagline: "The Ultimate Architecture Reverse-Engineering & Defense Prep Tool".
+
+On the left sidebar, the user selects the Local File Upload option to provide the project context.
+The user uploads their project file (like your Final Report.pdf) and clicks the "🚀 Analyze File" button.
+
+A loading spinner appears, saying "Extracting text and generating architecture..." This perfectly simulates the system reading the document and processing it through AI
+Once processing is complete, the main dashboard populates with the "📚 Reverse-Engineered Documentation".
+
+The user clicks the expander to reveal the deep dive into the Narrative Nexus project.
+
+This section demonstrates the extraction of the 3-Tier Architecture (Presentation, Application, and Data layers), shows the integrated architecture diagram (diagram.jpeg), and provides the read-aloud script for the Presentation Pitch.
+The user scrolls down to the "📝 Defense Preparation Test".
+
+The video shows the gamified UI where the user answers the auto-generated Multiple Choice Questions specifically tailored to Narrative Nexus (covering LDA, VADER, Hugging Face, and Streamlit).
+
+It demonstrates the interactive feedback loop: the user selects an option, clicks "Check Answer", and immediately sees a green ✅ success or red ❌ error message, along with a detailed explanation of the concept.
+Finally, the video likely shows the user finishing the 5-question quiz, which triggers the Streamlit balloons animation and displays the final score dashboard!
 
 ### Additional Demos
 [Add any extra demo materials/links - Live site, APK download, online demo, etc.]
