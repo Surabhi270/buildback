@@ -13,7 +13,7 @@
 - Member 2: [Surabhi Aneesh] - [College of Engineering Thalassery]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[https://buildback-nova.streamlit.app/]
 
 ### Project Description
 [BuildBack is an interactive web application designed to help Computer Science students and developers instantly reverse-engineer codebases and documentation into presentation-ready architecture guides. It acts as an automated "study buddy" and mock examiner, transforming raw project files into comprehensive technical breakdowns and interactive Viva Voce (project defense) mock tests.]
@@ -35,11 +35,6 @@
 - Frameworks used: [Streamlit]
 - Libraries used: [google-generativeai,requests,pypdf,python-pptx,zipfile, os, tempfile, json, re]
 - Tools used: [VS Code,Mermaid.js,GitHub REST API]
-
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
 
 ---
 
@@ -67,14 +62,6 @@ List the key features of your project:
 [Run commands - e.g., npm start, python app.py]
 ```
 
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
-
 ---
 
 ## Project Documentation
@@ -83,14 +70,23 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1]
+<img width="1916" height="882" alt="Screenshot 2026-02-28 110427" src="https://github.com/user-attachments/assets/befc2fcf-f282-4f7e-8d37-340b1d87ba76" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+Shows the main results dashboard after analysis, featuring the collapsible architecture guide, the report download button, and the start of the interactive mock test.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2]
+<img width="1916" height="854" alt="Screenshot 2026-02-28 110437" src="https://github.com/user-attachments/assets/c453ef9c-84d6-4adf-837f-160b40598440" />
+
+Illustrates the 3-tier system architecture diagram (Presentation, Application, and Data layers) of the Narrative Nexus project.
+
+![Screenshot3]
+<img width="1916" height="851" alt="Screenshot 2026-02-28 110444" src="https://github.com/user-attachments/assets/27838be9-30b7-4b90-a7e3-5ae0d57f9249" />
+
+Displays the AI-generated system architecture diagram (written in Mermaid code) along with a step-by-step textual walkthrough of the data flow.
+![Screenshot4]
+<img width="1911" height="864" alt="Screenshot 2026-02-28 110459" src="https://github.com/user-attachments/assets/4468e584-d774-42cb-b0dc-163a29c69f1c" />
+Shows the generated 60-second presentation pitch, the report download button, and the interactive defense preparation quiz interface.
 
 #### Diagrams
 
@@ -129,28 +125,6 @@ Step 5: Export & Deploy
 Once the review is complete, the user clicks a single button to download the entire generated architecture guide as a clean Markdown (.md) file, ready to be dropped into their repository as a professional README or printed for their defense.
 ---
 
-### For Hardware:
-
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-#### Build Photos
-
-![Team](Add photo of your team here)
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ---
 
@@ -198,93 +172,7 @@ Once the review is complete, the user clicks a single button to download the ent
 
 ---
 
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
 ---
-
-### For Hardware Projects:
-
-#### Bill of Materials (BOM)
-
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
-
 ### For Scripts/CLI Tools:
 
 #### Command Reference
